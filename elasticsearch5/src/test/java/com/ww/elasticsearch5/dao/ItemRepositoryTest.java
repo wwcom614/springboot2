@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ItemRepositoryTest {
 
     @Autowired
-    private ItemRepository itemRepository;
+    private com.ww.elasticsearch5.dao.ItemRepository itemRepository;
 
     @Test
     public void saveItem(){

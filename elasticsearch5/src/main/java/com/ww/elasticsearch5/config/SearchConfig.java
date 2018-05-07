@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.ww.elasticsearch5")
+@EnableElasticsearchRepositories(basePackages = "com.ww.springboot2_elasticsearch5")
 public class SearchConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(SearchConfig.class);
