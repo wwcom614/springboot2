@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1/users?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: ww
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  thymeleaf:
+    cache: false #关闭缓存，开发过程中修改页面及时刷新，上线生产环境需配置为true
+    mode: LEGACYHTML5 #去掉thymeleaf的严格的模板校验
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template: true #渲染之前检查template是否存在
+    enabled: true # Enable Thymeleaf view resolution for Web frameworks.
+    check-template-location: true # Check that the templates location exists.
+
+  mvc:
+    static-path-pattern: /static/**  #设定静态文件路径，js，css等
